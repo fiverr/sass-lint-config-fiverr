@@ -1,0 +1,110 @@
+options:
+  merge-default-rules: false
+  formatter: html
+  output-file: 'log/sass-lint.html'
+  max-warnings: 1000
+  cache-config: true
+rules:
+  brace-style:
+    style: '1tbs'
+  class-name-format:
+    - 2
+    -
+      convention:
+        ^(?!js-)[-0-9a-z]+$ # hyphenatedlowercase + disallowing 'js-' classes
+      allow-leading-underscore:
+        false
+      ignore:
+        .level_one_seller
+        .level_two_seller
+        .top_rated_seller
+        .logo-style-mascot_cartoon
+        .logo-style-flat_minimalist
+        .logo-style-watercolor_feminine
+        .logo-style-hand_drawn
+        .uploadifyQueue
+        .uploadifyError
+        .fileName
+        .uploadifyProgressBar
+        .gig_extras_achievment
+        .no_reply
+        .cs_escalate
+        .fb_iframe_widget
+  empty-line-between-blocks: 2
+  id-name-format:
+    - 2
+    -
+      convention:
+        hyphenatedlowercase
+      allow-leading-underscore:
+        false
+  indentation:
+    - 2
+    -
+      size: 4
+  leading-zero: 1
+  mixin-name-format:
+    - 1
+    -
+      convention:
+        hyphenatedlowercase
+      allow-leading-underscore:
+        false
+  max-file-line-count:
+    - 0 # ignored for a while
+    -
+      length: 500
+  nesting-depth:
+    - 0 # ignored for a while
+    -
+      max-depth: 5
+  no-color-hex: 2
+  no-color-keywords: 2
+  no-duplicate-properties:
+    - 2
+    -
+      exclude:
+        display
+  no-empty-rulesets: 2
+  no-ids: 1
+  no-invalid-hex: 2
+  no-important: 0 # ignored
+  no-mergeable-selectors: 1
+  no-misspelled-properties:
+    - 2
+    -
+      extra-properties:
+        overflow-scrolling
+  no-trailing-whitespace: 2
+  no-trailing-zero: 1
+  property-sort-order:
+    - 2
+    -
+      order:
+        content
+        background
+        background-color
+        background-position
+  quotes:
+    - 2
+    -
+      style: single
+  shorthand-values:
+    - 2
+    -
+      allowed-shorthands:
+        - 1
+        - 2
+  single-line-per-selector: false
+  space-after-bang: 2
+  space-after-colon: 2
+  space-after-comma: 2
+  trailing-semicolon: 2
+  variable-name-format:
+    - 1
+    -
+      convention:
+        snakecase
+      allow-leading-underscore:
+        false
+  zero-unit: 2
